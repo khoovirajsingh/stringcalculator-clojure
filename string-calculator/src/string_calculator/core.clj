@@ -5,4 +5,4 @@
   [number]
   (if (= "" number)
     "0"
-  (str number)))
+    (str number)))
