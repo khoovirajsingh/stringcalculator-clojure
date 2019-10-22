@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [string-calculator.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest test-sum-of-zero-is-zero
+  (testing
+    (is (= "0" (add "0")))))
