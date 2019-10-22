@@ -5,3 +5,7 @@
 (deftest test-sum-of-zero-is-zero
   (testing
     (is (= "0" (add "0")))))
+
+(deftest test-sum-of-empty-string-is-zero
+  (testing
+    (is (= "0" (add "")))))

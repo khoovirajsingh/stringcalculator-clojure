@@ -3,4 +3,6 @@
 
 (defn add
   [number]
-  (str number))
+  (if (= "" number)
+    "0"
+  (str number)))
