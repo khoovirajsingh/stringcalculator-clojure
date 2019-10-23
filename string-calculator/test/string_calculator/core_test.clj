@@ -13,3 +13,7 @@
 (deftest test-sum-of-0-and-1-is-one
   (testing
    (is (= "1" (add "0,1")))))
+
+(deftest test-parse-numbers
+  (testing
+   (is (= ["0", "1"] (parse-numbers "0,1")))))
