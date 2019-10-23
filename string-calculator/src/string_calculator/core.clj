@@ -9,13 +9,8 @@
   [x]
   (Long/valueOf x))
 
-(defn map-to-long
-  [numbers]
-  (map str->long numbers))
-
 (defn add
   [number]
   (if (= "" number)
     "0"
-    (str (apply + (map-to-long (parse-numbers number))))))
-
+    (str (apply + (map str->long (parse-numbers number))))))

@@ -14,8 +14,5 @@
 (deftest test-parse-numbers
    (is (= ["0", "1"] (parse-numbers "0,1"))))
 
-(deftest test-map-string-numbers-to-ints
-  (is (= [0, 1] (map-to-long ["0", "1"]))))
-
 (deftest test-sum-of-0-and-1-and-2-is-three
   (is (= "3" (add "0,1,2"))))
