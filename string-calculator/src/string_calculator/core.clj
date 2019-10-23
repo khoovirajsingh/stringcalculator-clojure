@@ -17,7 +17,5 @@
   [number]
   (if (= "" number)
     "0"
-    (if (= (clojure.string/includes? number ",") true) 
-      "1"
-    (str number))))
+    (str (apply + (map-to-long (parse-numbers number))))))
 
