@@ -14,5 +14,9 @@
 (deftest test-parse-numbers
    (is (= ["0", "1"] (parse-numbers "0,1"))))
 
-(deftest test-sum-of-0-and-1-and-2-is-three
-  (is (= "3" (add "0,1,2"))))
+(deftest test-sum-of-numbers-separated-by-comma
+  (is (= "3" (add "0,1,2")))
+  (is (= "6" (add "0,1,2,3"))))
+
+(deftest test-sum-of-numbers-separated-by-comma-and-newline
+  (is (= "6" (add "1\n2,3"))))

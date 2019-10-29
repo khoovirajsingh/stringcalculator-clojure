@@ -1,9 +1,13 @@
 (ns string-calculator.core
   (:gen-class))
 
-(defn parse-numbers
+(defn split-comma
   [numbers]
   (clojure.string/split numbers #"\,"))
+
+(defn parse-numbers
+  [numbers]
+  (mapcat split-comma (clojure.string/split-lines numbers)))
 
 (defn str->long
   [x]
